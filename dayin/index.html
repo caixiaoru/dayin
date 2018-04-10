@@ -60,23 +60,27 @@
                     }, function(ret, err) {
                         alert(JSON.stringify(ret));
                         alert(JSON.stringify(err));
+                        $api.setStorage("path",ret.savePath);
+                        alert(ret.savePath);
                         // if (ret.state == 1) {
                         //     alert("已保存");
                         // } else {
                         //   alert("保存失败");
                         // }
                     });
-//   var docReader = api.require('docReader');
-// docReader.open({
-//     path:'http://192.168.1.196/testExcel.xlsx',
-//     autorotation: false
-// }, function(ret, err) {
-//     if (ret.status) {
-//         alert(JSON.stringify(ret));
-//     } else {
-//         alert(JSON.stringify(err));
-//     }
-// });
+        var psth=$api.getStorage("path");
+        alert(psth);
+  var docReader = api.require('docReader');
+docReader.open({
+    path:psth,
+    autorotation: false
+}, function(ret, err) {
+    if (ret.status) {
+        alert(JSON.stringify(ret));
+    } else {
+        alert(JSON.stringify(err));
+    }
+});
     };
 </script>
 </html>

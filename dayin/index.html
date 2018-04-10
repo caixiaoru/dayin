@@ -45,27 +45,38 @@
 </head>
 <body>
     <div id="wrap">
-  
+      打印套餐
     </div>
 </body>
 <script type="text/javascript" src="./script/api.js"></script>
 <script type="text/javascript">
     apiready = function(){
-		api.download({
-                        url: 'http://192.168.1.196/testExcel.xlsx',
-                        savePath: '',
-                        report: true,
-                        cache: true,
-                        allowResume: true
-                    }, function(ret, err) {
-                        alert(JSON.stringify(ret));
-                        alert(JSON.stringify(err));
-                        // if (ret.state == 1) {
-                        //     alert("已保存");
-                        // } else {
-                        //   alert("保存失败");
-                        // }
-                    });
+        // api.download({
+  //                       url: 'http://192.168.1.196/testExcel.xlsx',
+  //                       savePath: '',
+  //                       report: true,
+  //                       cache: true,
+  //                       allowResume: true
+  //                   }, function(ret, err) {
+  //                       alert(JSON.stringify(ret));
+  //                       alert(JSON.stringify(err));
+  //                       // if (ret.state == 1) {
+  //                       //     alert("已保存");
+  //                       // } else {
+  //                       //   alert("保存失败");
+  //                       // }
+  //                   });
+  var docReader = api.require('docReader');
+docReader.open({
+    path: 'http://192.168.1.196/testExcel.xlsx',
+    autorotation: false
+}, function(ret, err) {
+    if (ret.status) {
+        alert(JSON.stringify(ret));
+    } else {
+        alert(JSON.stringify(err));
+    }
+});
     };
 </script>
 </html>

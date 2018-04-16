@@ -1,0 +1,60 @@
+/*移动端适配*/
+
+/*ipad*/
+@media (min-width:768px) and (max-width:1024px){
+    /*首页*/
+    .top_center_logo{width:100%}
+    .top_center_login{width:100%}
+    .top_center_login>div{float:left}
+    .list_watch>div{width:60%}
+    /*footer*/
+    .footer_top>div{width:50%}
+    .footer_top_qr,.footer_top_collect{width:100%!important;text-align: center}
+    .footer_top_qr dt{margin-right:0}
+
+
+}
+/*手机*/
+@media (max-width: 767px) {
+    .top_center_logo{width:100%}
+    .top_center_login{width:100%}
+    .top_center_login>div{float:left}
+    .top_center_logo span{display: block}
+    .top_center_login form{width:180px;display: inline-block}
+    .top_center{width:94%}
+    .swiper-container{width:100%}
+    .index_nav>div{width:94%;margin:0 auto}
+     nav ul li{padding:10px}
+    .index_content_left{width:100%;}
+    .index_content_right{width:100%;}
+    .index_content>div{width:94%;margin:0 auto;}
+    .index_content_left{padding-right:0}
+    .index_content_left_top ul li div:nth-of-type(1),.list_content ul li div:nth-of-type(1){width:100%;text-align: center}
+    .index_content_left_top ul li div:nth-of-type(2),.list_content ul li div:nth-of-type(2){width:100%;padding:10px 0}
+    .index_content_left_top ul li div:nth-of-type(1) img,.list_content ul li div:nth-of-type(1) img{width:60%;padding:10px 0}
+    .index_watch{margin-bottom:20px}
+    .content>div,.content_book>div{width:94%}
+    .content_img img{width:70%}
+    .list_alerts>div,.list_content div{width:94%}
+    .list_watch>div{width:80%}
+    .content_watch>div{width:100%}
+    .content_watch_left{width:100%; }
+    .content_watch_right{width:100%}
+    .content_watch_left video{margin-left:1%}
+    .content_watch_right>div{width:98%;margin-left:1%}
+    .content_watch_right>div{background-color: #282828}
+    .content_watch>div{margin-bottom:10px}
+    .content_book_bottom ul li{width:48%;margin-top:15px}
+    /*footer*/
+    .footer_top>div{width:100%;text-align: center}
+    .footer_top_service dd{text-align: left}
+    .footer_top_qr dt{margin-right:0}
+
+
+}
+@media (max-width: 320px) {
+    .top_center_login form input{width:120px}
+    .top_center_login form{width:130px;}
+
+}
+
